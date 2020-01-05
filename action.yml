@@ -1,0 +1,31 @@
+name: OctopusDeploy Create Release
+author: Burton Rheutan
+description: Create a new OctopusDeploy release
+inputs:
+  octopus_url:
+    description: 'URL of the OctopusDeploy server'
+    required: true
+  api_key:
+    description: 'OctopusDeploy API key'
+    required: true
+  project_name:
+    description: 'OctopusDeploy project to create the release for'
+    required: true
+  release_version:
+    description: 'The version to create the release for'
+    required: true
+  space_name:
+    description: 'The OctopusDeploy space that the project is in'
+    required: false
+    default: 'Default'
+outputs:
+  release_id:
+    description: 'ID of the created release'
+runs:
+  using: 'docker'
+  image: 'burtonr/octopus-action-client@0.1'
+  args:
+    - 'release'
+branding:
+  icon: 'package'
+  color: 'blue'
