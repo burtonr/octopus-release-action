@@ -23,7 +23,7 @@ outputs:
     description: 'ID of the created release'
 runs:
   using: 'docker'
-  image: 'burtonr/octopus-action-client@0.1'
+  image: 'docker://burtonr/octopus-action-client:0.1'
   args:
     - 'release'
 branding:
