@@ -18,12 +18,16 @@ inputs:
     description: 'The OctopusDeploy space that the project is in'
     required: false
     default: 'Default'
+  channel_name:
+    description: 'The Deployment channel to create the release for'
+    required: false
+    default: 'Default'
 outputs:
   release_id:
     description: 'ID of the created release'
 runs:
   using: 'docker'
-  image: 'docker://burtonr/octopus-action-client:0.1'
+  image: 'docker://burtonr/octopus-action-client:0.2'
   args:
     - 'release'
 branding:

@@ -37,6 +37,12 @@ _Optional_ The OctopusDeploy Space the project is located in
 
 More information here: [Spaces](https://octopus.com/docs/administration/spaces)
 
+### `channel_name`
+
+_Optional_ The OctopusDeploy Deployment Channel to create the release for
+
+More information here: [Channels](https://octopus.com/docs/deployment-process/channels)
+
 ## Example Usage
 
 ```yaml
